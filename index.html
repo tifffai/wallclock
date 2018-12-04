@@ -11,15 +11,15 @@
   <div class="clock">
     <div class="clock-face">
       <div class="hand second-hand"></div>
-      <div class="hand min-hand"></div>
+      <div class="hand minute-hand"></div>
       <div class="hand hour-hand"></div>
     </div>
   </div>
 
   <script>
     const secondHand = document.querySelector('.second-hand');
-    const secondHand = document.querySelector('.minute-hand');
-    const secondHand = document.querySelector('.hour-hand');
+    const minuteHand = document.querySelector('.minute-hand');
+    const hourHand = document.querySelector('.hour-hand');
 
 
     function setDate() {
@@ -31,6 +31,7 @@
 
       const minutes = now.getMinutes();
       const minsDeg = ((minutes / 60) * 360) + 90;
+      minuteHand.style.transform = `rotate(${minsDeg}deg)`;
 
 
 
